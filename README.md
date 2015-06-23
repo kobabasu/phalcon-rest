@@ -37,6 +37,10 @@ docker run --net=host --name -p 80:80 -p 443:443 -v /home/core/share/app:/var/ww
 ```
 mysql -h 0.0.0.0 --port 3306 -u[username] -p[password] -d [dbname] < sql api/sql/user.sql
 ```
+1. レコードをinsert
+```
+curl -i -X POST -d '{"name":"taro", "email":"taro@example.com"}' http://localhost:8080/api/users/
+```
 1. http://localhost:8080/api/users/で確認
 
 ## REST API
