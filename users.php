@@ -19,7 +19,7 @@ $app->get($uri, function() use ($app) {
     );
   }
 
-  echo json_encode($data);
+  return res('INDEX', $data);
 });
 
 
@@ -101,8 +101,20 @@ $app->delete($uri, function($id) use ($app) {
 
 function res($req, $res) {
   $response = new Response();
+  $response->setContentType('application/json');
 
   switch($req) {
+  case 'INDEX':
+    if ($res == false) {
+      $response->setJsonContent(array('status' => 'NOT-FOUND'));
+    } else {
+      $response->setJsonContent(array(
+        'status' => 'FOUND',
+        'data' => $res
+      ));
+    }
+    break;
+
   case 'READ':
     if ($res == false) {
       $response->setJsonContent(array('status' => 'NOT-FOUND'));

@@ -1,0 +1,13 @@
+{
+  "name": "phalcon-rest",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "frisby": "*"
+  },
+  "browser": {
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint"
+  }
+}
