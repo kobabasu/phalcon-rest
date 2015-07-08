@@ -1,13 +1,43 @@
 {
-  "name": "phalcon-rest",
+  "name": "phalcon-rest-app",
   "version": "0.0.1",
-  "dependencies": {},
+  "description": "phalcon-rest minimum set",
+  "main": "index.php",
+  "repository": {
+    "type": "git",
+    "url": "//github.com/kobabasu/phalcon-rest.git"
+  },
+  "keywords": [
+    "phalcon",
+    "frisby",
+    "REST"
+  ],
+  "os": [
+    "darwin",
+    "linux",
+    "!win32"
+  ],
+  "dependencies": {
+  },
   "devDependencies": {
     "frisby": "*"
   },
   "browser": {
   },
+  "browserify": [ "js" ],
   "eslintConfig": {
     "parser": "babel-eslint"
-  }
+  },
+  "scripts": {
+    "preinstall": "npm install -g babel browserify jasmine-node",
+    "start": "NODE_ENV=production NODE_PATH=app",
+    "babel": "babel ./spec/src --out-dir ./spec/js" ,
+    "browserify": "browserify ./spec/js/app.js -o ./spec/dist/build.js",
+    "jasmine": "jasmine-nope spec",
+    "test": "npm run babel; npm run browserify; npm run jasmine",
+    "build": "npm run babel; npm run browserify"
+  },
+  "preferGlobal": true,
+  "author": "kobabasu",
+  "license": "MIT"
 }
