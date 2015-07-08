@@ -1,7 +1,7 @@
 {
   "name": "phalcon-rest-app",
   "version": "0.0.1",
-  "description": "phalcon-rest minimum set",
+  "description": "phalcon-rest minimum app",
   "main": "index.php",
   "repository": {
     "type": "git",
