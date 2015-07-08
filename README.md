@@ -1,6 +1,8 @@
 # phalcon-rest
 
-`hub clone kobabasu/phalcon-rest api`
+```
+hub clone kobabasu/phalcon-rest api
+```
 
 ## npm
 **requireがないためbrowserifyは必要ない**
