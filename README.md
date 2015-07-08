@@ -49,7 +49,7 @@ curl -i -X POST -d '{"name":"taro", "email":"taro@example.com"}' http://localhos
 1. http://localhost:8080/api/users/で確認
 
 ## frisby
-1. DBに存在するIDを確認しコード変更
+1. DBに存在するIDを確認しコード変更  
    `vim api/spec/src/users_spec.es6`
 1. `npm test`
 1. すべてテストをパスすればOK
