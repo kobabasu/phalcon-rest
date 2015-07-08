@@ -29,7 +29,7 @@
 1. `vagnrat ssh`
 1. mysqlコンテナ起動
 ```
-docker run --net=host --name mysql -p 3306:3306 -e "ROOT_PW=..." -e "DB_NAME=..." -e "DB_USER=..." -e "DB_PASS=..." -d anagift/mysql:0.74
+docker run --net=host --name mysql -p 3306:3306 -e "ROOT_PW=..." -e "DB_NAME=..." -e "DB_USER=..." -e "DB_PASS=..." -d kobabasu/mysql:0.74
 ```
 1. apacheコンテナ起動
 ```
