@@ -29,7 +29,7 @@
     "parser": "babel-eslint"
   },
   "scripts": {
-    "preinstall": "npm install -g babel jasmine-node",
+    "preinstall": "npm install -g babel babel-eslint jasmine-node",
     "start": "NODE_ENV=production NODE_PATH=app",
     "babel": "babel ./spec/src --out-dir ./spec/js" ,
     "jasmine": "jasmine-node spec/js",
