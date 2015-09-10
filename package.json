@@ -7,6 +7,7 @@
     "type": "git",
     "url": "//github.com/kobabasu/phalcon-rest.git"
   },
+
   "keywords": [
     "phalcon",
     "frisby",
@@ -17,25 +18,31 @@
     "linux",
     "!win32"
   ],
+
   "dependencies": {
   },
   "devDependencies": {
     "frisby": "*"
   },
+
   "browser": {
   },
   "browserify": [ "js" ],
   "eslintConfig": {
     "parser": "babel-eslint"
   },
+
   "scripts": {
     "preinstall": "npm install -g babel babel-eslint jasmine-node",
     "start": "NODE_ENV=production NODE_PATH=app",
+
     "babel": "babel ./spec/src --out-dir ./spec/js" ,
     "jasmine": "jasmine-node spec/js",
+
     "test": "npm run babel; npm run jasmine",
     "build": "npm run babel"
   },
+
   "preferGlobal": true,
   "author": "kobabasu",
   "license": "MIT"
