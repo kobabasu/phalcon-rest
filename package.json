@@ -33,8 +33,12 @@
   },
 
   "scripts": {
-    "preinstall": "npm install -g babel babel-eslint jasmine-node",
-    "start": "NODE_ENV=production NODE_PATH=app",
+    "global": "npm install -g babel babel-eslint jasmine-node;",
+
+    "_mv": "mv -f ./node_modules/frisby ../node_modules/",
+    "_rm": "rm -fr ./node_modules",
+    "postinstall": "if [ -e ../node_modules ]; then npm run _mv; npm run _rm; fi",
+    "start": "NODE_ENV=development",
 
     "babel": "babel ./spec/src --out-dir ./spec/js" ,
     "jasmine": "jasmine-node spec/js",
